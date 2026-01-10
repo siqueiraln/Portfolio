@@ -9,9 +9,9 @@ const About: React.FC = () => {
         
         {/* Title Section */}
         <div className="text-left mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 uppercase">
             <span className="text-brand-500 mr-2">/</span>
-            O PILOTO
+            Sobre Mim
           </h2>
         </div>
 

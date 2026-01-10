@@ -23,8 +23,8 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
+    { name: 'Soluções', id: SectionId.SKILLS },
     { name: 'Sobre', id: SectionId.ABOUT },
-    { name: 'Soluções', id: SectionId.SKILLS }, // Changed label to Soluções, ID remains same for anchor
     { name: 'Projetos', id: SectionId.PROJECTS },
     { name: 'Contato', id: SectionId.CONTACT },
   ];
@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
                 onClick={() => scrollToSection(SectionId.CONTACT)}
                 className="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-brand-500/25"
               >
-                Contrate-me
+                Contate-me
               </button>
             </div>
           </div>

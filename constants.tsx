@@ -3,15 +3,16 @@ import { Zap, Rocket, Link } from 'lucide-react';
 import { Project, Solution } from './types';
 
 export const PERSONAL_INFO = {
-  name: "Jhonatan Lopes",
+  name: "Lucas Siqueira",
   role: "Desenvolvedor No-Code & Especialista em Automação IA",
-  bio: "Desenvolvimento de MVPs, SaaS, automações e integrações focadas em eficiência, redução de custos e crescimento sustentável.",
-  email: "contato@jhonatanlopes.pro",
+  bio: "Desenvolvedor No-Code focado em performance e escalabilidade. Mantenho uma rotina de estudos constantes para entregar soluções que resolvem problemas reais, sem 'gambiarras'. Busco integrar um time onde possa somar com minha técnica, aprender com novos desafios e contribuir para o crescimento sólido do negócio.",
+  email: "lucas.sikeira78@gmail.com",
   socials: {
-    linkedin: "#",
-    instagram: "#",
-    github: "#",
-    whatsapp: "https://wa.me/5511999999999" // Substitua pelo seu link do WhatsApp
+    linkedin: "https://www.linkedin.com/in/lucas-siqueira-1a5bb51b2/",
+    instagram: "https://www.instagram.com/siqueiraln/",
+    github: "https://github.com/siqueiraln",
+    whatsapp: "https://wa.me/5579998974970",
+    facebook: "https://www.facebook.com/lsikeira?locale=pt_BR"
   }
 };
 
@@ -37,9 +38,9 @@ export const SOLUTIONS: Solution[] = [
 ];
 
 export const ABOUT_TEXT = [
-  "Atuo com foco total na entrega de valor e resultados tangíveis para o negócio. Minha abordagem estratégica visa identificar gargalos operacionais e transformá-los em vantagens competitivas, garantindo que cada solução desenvolvida tenha um impacto direto na eficiência e na receita da sua empresa.",
-  "Especialista em tecnologias No-Code e automação com Inteligência Artificial, reduzo drasticamente o tempo de desenvolvimento tradicional. Isso permite validar hipóteses, lançar MVPs e escalar produtos digitais com uma velocidade incomparável, mantendo a robustez e a segurança necessárias para operações críticas.",
-  "Combinando agilidade técnica com uma visão de alta performance, entrego softwares e automações que não apenas funcionam, mas que impulsionam o crescimento. Meu compromisso é com a excelência na execução e a criação de ecossistemas digitais sustentáveis e escaláveis."
+  "Embora eu tenha uma preferência clara pelo Bubble, consigo desenvolver com autonomia na maioria das plataformas No-Code e Vibe Coding. Encaro a IA como um amplificador que me confere verdadeiros superpoderes: com ela, sinto que não há barreira técnica que me impeça de construir qualquer coisa que a criatividade mandar. Para mim, a ferramenta é um meio, e a capacidade de entrega é o que define o jogo.",
+  "Minha trajetória profissional é diversificada, e considero isso minha maior força. Antes de me tornar desenvolvedor, atuei como técnico em informática, técnico em agronegócio e fui técnico e analista de times profissionais de esports, com experiência internacional. Essa vivência multidisciplinar me ensinou a ter adaptabilidade, visão estratégica e foco em resultados sob pressão.",
+  "Hoje, já inserido no mercado de tecnologia, mantenho a mentalidade de constante evolução. Não me limito apenas ao universo No-Code; sigo estudando novas arquiteturas e me aprofundando em High-Code, como JavaScript e Python. Meu objetivo é ter um arsenal completo para resolver problemas complexos da forma mais eficiente possível."
 ];
 
 export const PROJECTS: Project[] = [

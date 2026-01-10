@@ -23,17 +23,13 @@ const Hero: React.FC = () => {
               {PERSONAL_INFO.name}
             </h1>
             
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-300 mb-6 leading-tight">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-slate-300 mb-4 leading-tight max-w-lg">
               Soluções digitais sob medida para{' '}
               <span className="text-brand-400">escalar seu negócio</span>
             </h2>
 
-            <p className="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
-              Desenvolvimento de <span className="text-brand-400 font-medium">MVPs</span>,{' '}
-              <span className="text-brand-400 font-medium">SaaS</span>,{' '}
-              <span className="text-brand-400 font-medium">automações</span> e{' '}
-              <span className="text-brand-400 font-medium">integrações</span> focadas 
-              em eficiência, redução de custos e crescimento sustentável.
+            <p className="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed text-justify">
+              {PERSONAL_INFO.bio}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -67,8 +63,8 @@ const Hero: React.FC = () => {
             {/* Image Container */}
             <div className="relative rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl bg-slate-900/50">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
-                alt="Jhonatan Lopes" 
+                src="https://github.com/siqueiraln.png?v=2"
+                alt={PERSONAL_INFO.name} 
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
               />
               {/* Overlay Gradient */}

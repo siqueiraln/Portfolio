@@ -1,11 +1,34 @@
-import React from 'react';
-import { Mail, Linkedin, Instagram, ArrowUp } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Linkedin, Instagram, ArrowUp, Github, Facebook } from 'lucide-react';
 import { SectionId } from '../types';
 import { PERSONAL_INFO } from '../constants';
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { name, message } = formData;
+    
+    // Construct the mailto link with encoded parameters
+    // Note: window.open or window.location.href works for mailto.
+    window.location.href = `mailto:${PERSONAL_INFO.email}?subject=Contato pelo Portfólio&body=Nome: ${encodeURIComponent(name)}%0D%0AMensagem: ${encodeURIComponent(message)}`;
   };
 
   return (
@@ -15,7 +38,7 @@ const Contact: React.FC = () => {
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">Vamos construir algo incrível juntos?</h2>
             <p className="text-slate-400 mb-8 max-w-md">
-              Estou disponível para projetos freelance e consultorias. Se você tem uma ideia e quer tirá-la do papel rapidamente com No-Code e IA, entre em contato.
+              Estou pronto para integrar sua equipe e elevar o nível das entregas. Se sua empresa valoriza performance, escalabilidade e resolução de problemas pela raiz, vamos conversar.
             </p>
             
             <div className="space-y-4">
@@ -24,31 +47,81 @@ const Contact: React.FC = () => {
                 {PERSONAL_INFO.email}
               </a>
               <div className="flex gap-4 mt-4">
-                <a href={PERSONAL_INFO.socials.linkedin} className="p-3 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-brand-600 transition-all">
+                <a 
+                  href={PERSONAL_INFO.socials.linkedin} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-brand-600 transition-all"
+                >
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href={PERSONAL_INFO.socials.instagram} className="p-3 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-pink-600 transition-all">
+                <a 
+                  href={PERSONAL_INFO.socials.instagram} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-pink-600 transition-all"
+                >
                   <Instagram className="w-5 h-5" />
+                </a>
+                <a 
+                  href={PERSONAL_INFO.socials.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-slate-600 transition-all"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a 
+                  href={PERSONAL_INFO.socials.facebook} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-blue-600 transition-all"
+                >
+                  <Facebook className="w-5 h-5" />
                 </a>
               </div>
             </div>
           </div>
 
           <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-slate-400 mb-1">Nome</label>
-                <input type="text" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all" placeholder="Seu nome" />
+                <input 
+                  type="text" 
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all" 
+                  placeholder="Seu nome" 
+                  required
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium text-slate-400 mb-1">Email</label>
-                <input type="email" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all" placeholder="seu@email.com" />
+                <input 
+                  type="email" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all" 
+                  placeholder="seu@email.com" 
+                  required
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium text-slate-400 mb-1">Mensagem</label>
-                <textarea rows={4} className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all resize-none" placeholder="Conte-me sobre seu projeto..." />
+                <textarea 
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={4} 
+                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all resize-none" 
+                  placeholder="Conte-me sobre seu projeto..." 
+                  required
+                />
               </div>
-              <button className="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 rounded-lg transition-colors">
+              <button type="submit" className="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 rounded-lg transition-colors">
                 Enviar Mensagem
               </button>
             </form>
