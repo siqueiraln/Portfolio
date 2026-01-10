@@ -10,11 +10,11 @@ export interface Project {
   demoUrl?: string;
 }
 
-export interface Skill {
-  name: string;
+export interface Solution {
+  id: string;
+  title: string;
+  description: string;
   icon: React.ReactNode;
-  level: number; // 1-100
-  category: 'No-Code' | 'AI & Automation' | 'Design';
 }
 
 export interface ChatMessage {
@@ -26,7 +26,7 @@ export interface ChatMessage {
 export enum SectionId {
   HERO = 'home',
   ABOUT = 'about',
-  SKILLS = 'skills',
+  SKILLS = 'skills', // Mantido o ID 'skills' para preservar a navegação existente
   PROJECTS = 'projects',
   CONTACT = 'contact',
 }

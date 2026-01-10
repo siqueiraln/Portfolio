@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Sobre', id: SectionId.ABOUT },
-    { name: 'Habilidades', id: SectionId.SKILLS },
+    { name: 'Soluções', id: SectionId.SKILLS }, // Changed label to Soluções, ID remains same for anchor
     { name: 'Projetos', id: SectionId.PROJECTS },
     { name: 'Contato', id: SectionId.CONTACT },
   ];

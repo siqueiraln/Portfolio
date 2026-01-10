@@ -1,5 +1,5 @@
 import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
-import { PERSONAL_INFO, PROJECTS, SKILLS } from '../constants';
+import { PERSONAL_INFO, PROJECTS, SOLUTIONS } from '../constants';
 
 // System instruction to give the AI context about the portfolio owner
 const SYSTEM_INSTRUCTION = `
@@ -11,7 +11,7 @@ Informações do perfil:
 - Experiência: Cerca de 1 ano de aprendizado intensivo e prática.
 - Comunidade: Membro ativo da "Comunidade Sem Codar".
 - Diferencial: Utiliza Inteligência Artificial para acelerar o desenvolvimento e melhorar a qualidade do código/no-code.
-- Habilidades principais: ${SKILLS.map(s => s.name).join(', ')}.
+- Soluções que entrega: ${SOLUTIONS.map(s => s.title + " (" + s.description + ")").join('; ')}.
 - Projetos recentes: ${PROJECTS.map(p => p.title).join(', ')}.
 
 Tom de voz: Profissional, entusiasmado, moderno e direto.
