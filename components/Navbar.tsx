@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Code2 } from 'lucide-react';
 import { SectionId } from '../types';
+import { PERSONAL_INFO } from '../constants';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,12 +56,14 @@ const Navbar: React.FC = () => {
                   {link.name}
                 </button>
               ))}
-              <button 
-                onClick={() => scrollToSection(SectionId.CONTACT)}
+              <a 
+                href={PERSONAL_INFO.socials.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-brand-500/25"
               >
                 Contate-me
-              </button>
+              </a>
             </div>
           </div>
 
