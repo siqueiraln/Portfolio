@@ -46,28 +46,28 @@ export const ABOUT_TEXT = [
 export const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'Agendamento Online',
+    title: 'Nox - Agendamento Online',
     category: 'Bubble App',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: 'https://picsum.photos/800/600?random=10',
-    techStack: ['Bubble', 'SaaS'],
+    description: 'Projeto pessoal. O NOX combina lógica avançada de slots (feita em JavaScript) com a potência da API do WhatsApp.',
+    imageUrl: '/nox.jpeg',
+    techStack: ['Bubble', 'SaaS', 'JavaScript', 'WhatsApp API'],
     demoUrl: 'https://aplicativoagendamento.bubbleapps.io/version-test/agendamento'
   },
   {
     id: '2',
     title: 'Marketplace de Serviços',
     category: 'Bubble App',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: 'https://picsum.photos/800/600?random=11',
-    techStack: ['Bubble', 'Marketplace'],
+    description: 'Essa aplicação foi a primeira atividade que desenvolvi quando ingressei na comunidade sem codar do Renato Asse. Esse projeto envolve design responsivo, API de pagamentos e uso de plugins.',
+    imageUrl: '/marketplace.png',
+    techStack: ['Bubble', 'Marketplace', 'API de Pagamentos', 'Plugins'],
     demoUrl: 'https://marketplace---aula-91638.bubbleapps.io/version-test'
   },
   {
     id: '3',
     title: 'SVG to JSON Converter',
     category: 'Tool',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: 'https://picsum.photos/800/600?random=12',
+    description: 'Aplicação desenvolvida para extrair dados de SVGs e armazenar em JSON, resolvendo uma dor real do InfoEduc Plus.',
+    imageUrl: '/svgtojson.png',
     techStack: ['Lovable', 'React'],
     demoUrl: 'https://svgtojson.lovable.app'
   },
@@ -75,8 +75,8 @@ export const PROJECTS: Project[] = [
     id: '4',
     title: 'InfoEduc',
     category: 'EdTech',
-    description: 'Atuação profissional na InfoEduc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: 'https://picsum.photos/800/600?random=13',
+    description: 'Atuo diretamente no desenvolvimento da plataforma, construindo integrações sólidas, criando novas funcionalidades e otimizando fluxos antigos para deixar o sistema mais performático e escalável.',
+    imageUrl: '/infoeduc.png',
     techStack: ['Plataforma Web', 'Educação'],
     demoUrl: 'https://infoeduc.com.br/'
   }
