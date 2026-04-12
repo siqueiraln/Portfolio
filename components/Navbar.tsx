@@ -40,8 +40,8 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollToSection(SectionId.HERO)}>
             <div className="flex items-center gap-2">
-              <Code2 className="h-8 w-8 text-brand-500" />
-              <span className="font-bold text-xl tracking-tight text-white">Dev<span className="text-brand-400">NoCode</span></span>
+              <Code2 className="h-7 w-7 text-brand-400" />
+              <span className="font-display font-800 text-lg tracking-widest text-white uppercase">Dev<span className="text-brand-400">NoCode</span></span>
             </div>
           </div>
           
@@ -56,11 +56,11 @@ const Navbar: React.FC = () => {
                   {link.name}
                 </button>
               ))}
-              <a 
+              <a
                 href={PERSONAL_INFO.socials.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-brand-500/25"
+                className="clip-chamfer bg-brand-600 hover:bg-brand-500 text-white px-5 py-2 text-xs font-bold uppercase tracking-widest transition-all shadow-lg hover:shadow-brand-500/30"
               >
                 Contate-me
               </a>

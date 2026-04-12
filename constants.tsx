@@ -21,19 +21,19 @@ export const SOLUTIONS: Solution[] = [
     id: 'automation',
     title: 'Automação de Processos',
     description: 'Elimine tarefas repetitivas. Conecte sistemas, dispare ações automáticas e libere sua equipe para o que realmente importa.',
-    icon: <Zap className="w-8 h-8 text-yellow-400" />
+    icon: <Zap className="w-7 h-7 text-white" />
   },
   {
     id: 'mvp',
     title: 'MVP e SaaS Rápido',
     description: 'Valide sua ideia em semanas, não meses. Lance seu produto digital com velocidade e qualidade profissional.',
-    icon: <Rocket className="w-8 h-8 text-blue-400" />
+    icon: <Rocket className="w-7 h-7 text-white" />
   },
   {
     id: 'integrations',
     title: 'Integrações Inteligentes',
     description: 'WhatsApp, CRMs, pagamentos, APIs. Faça seus sistemas conversarem e trabalharem juntos sem fricção.',
-    icon: <Link className="w-8 h-8 text-white" />
+    icon: <Link className="w-7 h-7 text-white" />
   }
 ];
 
@@ -44,33 +44,6 @@ export const ABOUT_TEXT = [
 ];
 
 export const PROJECTS: Project[] = [
-  {
-    id: '1',
-    title: 'Nox - Agendamento Online',
-    category: 'Bubble App',
-    description: 'Projeto pessoal. O NOX combina lógica avançada de slots (feita em JavaScript) com a potência da API do WhatsApp.',
-    imageUrl: '/nox.jpeg',
-    techStack: ['Bubble', 'SaaS', 'JavaScript', 'WhatsApp API'],
-    demoUrl: 'https://aplicativoagendamento.bubbleapps.io/version-test/agendamento'
-  },
-  {
-    id: '2',
-    title: 'Marketplace de Serviços',
-    category: 'Bubble App',
-    description: 'Essa aplicação foi a primeira atividade que desenvolvi quando ingressei na comunidade sem codar do Renato Asse. Esse projeto envolve design responsivo, API de pagamentos e uso de plugins.',
-    imageUrl: '/marketplace.png',
-    techStack: ['Bubble', 'Marketplace', 'API de Pagamentos', 'Plugins'],
-    demoUrl: 'https://marketplace---aula-91638.bubbleapps.io/version-test'
-  },
-  {
-    id: '3',
-    title: 'SVG to JSON Converter',
-    category: 'Tool',
-    description: 'Aplicação desenvolvida para extrair dados de SVGs e armazenar em JSON, resolvendo uma dor real do InfoEduc Plus.',
-    imageUrl: '/svgtojson.png',
-    techStack: ['Lovable', 'React'],
-    demoUrl: 'https://svgtojson.lovable.app'
-  },
   {
     id: '4',
     title: 'InfoEduc',

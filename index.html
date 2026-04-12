@@ -13,58 +13,87 @@
         extend: {
           colors: {
             brand: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#bae6fd',
-              300: '#7dd3fc',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              800: '#075985',
-              900: '#0c4a6e',
-              950: '#082f49',
+              50:  '#f0eeff',
+              100: '#e2deff',
+              200: '#c9c4ff',
+              300: '#a8a3d8',
+              400: '#9290c3',
+              500: '#7875b5',
+              600: '#535c91',
+              700: '#3d4578',
+              800: '#1b1a55',
+              900: '#0f1340',
+              950: '#070f2b',
             },
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Special Gothic Expanded One"', 'system-ui', 'sans-serif'],
           },
           keyframes: {
             wiggle: {
               '0%, 100%': { transform: 'rotate(-15deg)' },
-              '50%': { transform: 'rotate(15deg)' },
+              '50%':       { transform: 'rotate(15deg)' },
             }
           },
           animation: {
             'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            wiggle: 'wiggle 1s ease-in-out infinite',
+            wiggle:       'wiggle 1s ease-in-out infinite',
           }
         },
       },
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    body { font-family: 'Inter', sans-serif; }
+
+    /* ── Gaming clip-path helpers ── */
+    .clip-chamfer {
+      clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+    }
+    .clip-notch {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+    }
+    .clip-badge {
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+    }
+    .clip-chamfer-sm {
+      clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
     }
 
-    /* Custom scrollbar for Webkit */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar       { width: 6px; }
+    ::-webkit-scrollbar-track { background: #070f2b; }
+    ::-webkit-scrollbar-thumb { background: #535c91; }
+    ::-webkit-scrollbar-thumb:hover { background: #9290c3; }
 
-    ::-webkit-scrollbar-track {
-      background: #0f172a;
-    }
+    /* ── Float animations ── */
+    @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+    @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    .float-a { animation: floatA 3.5s ease-in-out infinite; }
+    .float-b { animation: floatB 4.2s ease-in-out infinite 0.6s; }
+    .float-c { animation: floatC 3.8s ease-in-out infinite 1.2s; }
+    .float-d { animation: floatB 4.5s ease-in-out infinite 0.3s; }
+    .float-e { animation: floatA 3.2s ease-in-out infinite 0.9s; }
 
-    ::-webkit-scrollbar-thumb {
-      background: #334155;
-      border-radius: 4px;
+    /* ── Corner accent helper ── */
+    .corner-br::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 12px; height: 12px;
+      background: #9290c3;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
     }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #475569;
+    .corner-tr::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 10px; height: 10px;
+      background: #535c91;
+      clip-path: polygon(100% 0, 100% 100%, 0 0);
     }
   </style>
   <script type="module" src="/index.tsx"></script>
