@@ -4,8 +4,8 @@ import { Project, Solution } from './types';
 
 export const PERSONAL_INFO = {
   name: "Lucas Siqueira",
-  role: "Desenvolvedor No-Code & Especialista em Automação IA",
-  bio: "Desenvolvedor No-Code focado em performance e escalabilidade. Mantenho uma rotina de estudos constantes para entregar soluções que resolvem problemas reais, sem 'gambiarras'. Busco integrar um time onde possa somar com minha técnica, aprender com novos desafios e contribuir para o crescimento sólido do negócio.",
+  role: "Desenvolvedor No-Code & Especialista em Automação com n8n e IA",
+  bio: "Desenvolvedor No-Code especialista em Bubble e automação com n8n. Construo soluções digitais que eliminam processos manuais, integram sistemas e escalam negócios — sem gambiarras. Atendo presencial em Simão Dias/SE e remoto em todo o Brasil.",
   email: "lucas.sikeira78@gmail.com",
   socials: {
     linkedin: "https://www.linkedin.com/in/lucas-siqueira-1a5bb51b2/",
@@ -19,28 +19,28 @@ export const PERSONAL_INFO = {
 export const SOLUTIONS: Solution[] = [
   {
     id: 'automation',
-    title: 'Automação de Processos',
-    description: 'Elimine tarefas repetitivas. Conecte sistemas, dispare ações automáticas e libere sua equipe para o que realmente importa.',
+    title: 'Automação com n8n e IA',
+    description: 'Elimine tarefas repetitivas com automações no n8n, Make e IA. Conecte sistemas, dispare ações automáticas e libere sua equipe para o que realmente importa.',
     icon: <Zap className="w-7 h-7 text-white" />
   },
   {
     id: 'mvp',
-    title: 'MVP e SaaS Rápido',
-    description: 'Valide sua ideia em semanas, não meses. Lance seu produto digital com velocidade e qualidade profissional.',
+    title: 'MVP e SaaS no Bubble',
+    description: 'Valide sua ideia em semanas com Bubble. Lance seu produto digital com velocidade, qualidade profissional e sem precisar de uma equipe de devs.',
     icon: <Rocket className="w-7 h-7 text-white" />
   },
   {
     id: 'integrations',
     title: 'Integrações Inteligentes',
-    description: 'WhatsApp, CRMs, pagamentos, APIs. Faça seus sistemas conversarem e trabalharem juntos sem fricção.',
+    description: 'WhatsApp API, CRMs, gateways de pagamento e APIs externas. Faço seus sistemas conversarem com n8n e entregarem resultados automaticamente.',
     icon: <Link className="w-7 h-7 text-white" />
   }
 ];
 
 export const ABOUT_TEXT = [
-  "Embora eu tenha uma preferência clara pelo Bubble, consigo desenvolver com autonomia na maioria das plataformas No-Code e Vibe Coding. Encaro a IA como um amplificador que me confere verdadeiros superpoderes: com ela, sinto que não há barreira técnica que me impeça de construir qualquer coisa que a criatividade mandar. Para mim, a ferramenta é um meio, e a capacidade de entrega é o que define o jogo.",
-  "Minha trajetória profissional é diversificada, e considero isso minha maior força. Antes de me tornar desenvolvedor, atuei como técnico em informática, técnico em agronegócio e fui técnico e analista de times profissionais de esports, com experiência internacional. Essa vivência multidisciplinar me ensinou a ter adaptabilidade, visão estratégica e foco em resultados sob pressão.",
-  "Hoje, já inserido no mercado de tecnologia, mantenho a mentalidade de constante evolução. Não me limito apenas ao universo No-Code; sigo estudando novas arquiteturas e me aprofundando em High-Code, como JavaScript e Python. Meu objetivo é ter um arsenal completo para resolver problemas complexos da forma mais eficiente possível."
+  "Sou desenvolvedor No-Code especialista em Bubble e automação com n8n, baseado em Simão Dias/SE e disponível para projetos remotos em todo o Brasil. Utilizo IA como amplificador do meu trabalho — com ela, não existe barreira técnica que me impeça de entregar qualquer solução que o negócio exija. Para mim, a ferramenta é o meio. O resultado é o que define o jogo.",
+  "Antes de entrar para o desenvolvimento, atuei como técnico em informática, técnico em agronegócio e analista de times profissionais de esports com experiência internacional. Essa trajetória multidisciplinar me deu algo raro: adaptabilidade real, visão estratégica e capacidade de entregar sob pressão — habilidades que levo direto para cada projeto.",
+  "Hoje atuo no mercado de tecnologia com foco em automações com n8n, desenvolvimento de aplicações no Bubble, integrações com WhatsApp API, CRMs e gateways de pagamento. Estou sempre evoluindo: estudo arquiteturas No-Code e High-Code, como JavaScript e Python, para ter um arsenal completo na hora de resolver problemas complexos."
 ];
 
 export const PROJECTS: Project[] = [
