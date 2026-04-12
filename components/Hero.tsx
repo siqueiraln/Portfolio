@@ -37,34 +37,40 @@ const Hero: React.FC = () => {
           {/* ── LEFT ── */}
           <div className="flex-shrink-0 w-full md:max-w-[480px] text-left z-10">
 
-            <div className="flex items-center gap-3 mb-5">
+            <div className="flex items-center gap-3 mb-5"
+              style={{ animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.1s' }}>
               <div className="w-6 h-px bg-brand-400" />
               <span className="text-sm text-slate-400 tracking-wide">
                 Hey, eu sou <span className="text-brand-300 font-semibold">Lucas Siqueira</span>
               </span>
             </div>
 
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white uppercase leading-[0.95] tracking-tight mb-1">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white uppercase leading-[0.95] tracking-tight mb-1"
+              style={{ animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.25s' }}>
               Desenvolvedor
             </h1>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl uppercase leading-[0.95] tracking-tight mb-1"
-              style={{ color: '#9290c3' }}>
+              style={{ color: '#9290c3', animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.4s' }}>
               No-Code
             </h1>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white uppercase leading-[0.95] tracking-tight mb-8">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white uppercase leading-[0.95] tracking-tight mb-8"
+              style={{ animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.55s' }}>
               &amp; IA
             </h1>
 
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-6"
+              style={{ animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.65s' }}>
               <div className="w-10 h-px bg-brand-600" />
               <div className="w-2 h-2 rotate-45 bg-brand-400" />
             </div>
 
-            <p className="text-slate-400 text-base leading-relaxed mb-8 max-w-md">
+            <p className="text-slate-400 text-base leading-relaxed mb-8 max-w-md"
+              style={{ animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.75s' }}>
               {PERSONAL_INFO.bio}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4"
+              style={{ animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.9s' }}>
               <a
                 href={PERSONAL_INFO.socials.whatsapp}
                 target="_blank"
@@ -86,7 +92,8 @@ const Hero: React.FC = () => {
           </div>
 
           {/* ── RIGHT ── */}
-          <div className="relative flex-shrink-0 w-[320px] lg:w-[380px]" style={{ height: '460px' }}>
+          <div className="relative flex-shrink-0 w-[320px] lg:w-[380px]"
+            style={{ height: '460px', animation: 'heroSlideRight 0.8s ease both', animationDelay: '0.3s' }}>
 
             {/* Glow behind photo */}
             <div className="absolute inset-0 rounded-full blur-[80px] -z-10"

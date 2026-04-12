@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
 
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-14 gap-4">
-          <div>
+          <div className="reveal from-left">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="w-6 h-px bg-brand-400"></div>
               <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-400">// Trabalhos selecionados</span>
@@ -24,10 +24,10 @@ const Projects: React.FC = () => {
 
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PROJECTS.map((project) => (
+          {PROJECTS.map((project, index) => (
             <div
               key={project.id}
-              className="group relative bg-brand-900/40 border border-brand-700/30 hover:border-brand-500/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-800/30 flex flex-col h-full clip-notch overflow-hidden"
+              className={`reveal delay-${(index + 1) * 100} group relative bg-brand-900/40 border border-brand-700/30 hover:border-brand-500/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-800/30 flex flex-col h-full clip-notch overflow-hidden`}
             >
               {/* Top accent line */}
               <div className="absolute top-0 left-0 right-0 h-0.5 bg-brand-700 group-hover:bg-brand-400 transition-colors duration-300 z-10"></div>
@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-transparent to-transparent"></div>
 
-                {/* Category badge — diagonal clip */}
+                {/* Category badge */}
                 <div className="absolute top-3 right-3">
                   <span className="clip-badge px-3 py-1 text-[10px] font-black uppercase tracking-widest bg-brand-800/90 text-brand-300 backdrop-blur">
                     {project.category}
@@ -83,7 +83,7 @@ const Projects: React.FC = () => {
                 </div>
               </div>
 
-              {/* Bottom-right corner accent */}
+              {/* Corner accent */}
               <div
                 className="absolute bottom-0 right-0 w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity"
                 style={{ background: '#9290c3', clipPath: 'polygon(100% 0, 100% 100%, 0 100%)' }}

@@ -11,7 +11,7 @@ const Skills: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
-        <div className="text-left mb-16">
+        <div className="text-left mb-16 reveal from-left">
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="w-6 h-px bg-brand-400" />
             <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-400">// O que eu resolvo</span>
@@ -30,7 +30,7 @@ const Skills: React.FC = () => {
           {SOLUTIONS.map((solution, index) => (
             <div
               key={solution.id}
-              className="group relative clip-notch p-8 flex flex-col transition-all duration-300 hover:-translate-y-1"
+              className={`reveal delay-${(index + 1) * 100} group relative clip-notch p-8 flex flex-col transition-all duration-300 hover:-translate-y-1`}
               style={{
                 background: '#070f2b',
                 border: '1px solid rgba(83,92,145,0.2)',

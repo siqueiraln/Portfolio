@@ -11,7 +11,7 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-left mb-12">
+        <div className="text-left mb-12 reveal from-left">
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="w-6 h-px bg-brand-400"></div>
             <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-400">// Sobre mim</span>
@@ -22,7 +22,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Content card — notch */}
-        <div className="relative clip-notch p-8 md:p-12 group transition-all duration-300" style={{ background: '#070f2b', border: '1px solid rgba(83,92,145,0.2)', boxShadow: '0 8px 32px rgba(0,0,0,0.5)' }}>
+        <div className="reveal delay-200 relative clip-notch p-8 md:p-12 group transition-all duration-300" style={{ background: '#070f2b', border: '1px solid rgba(83,92,145,0.2)', boxShadow: '0 8px 32px rgba(0,0,0,0.5)' }}>
           {/* Top accent */}
           <div className="absolute top-0 left-0 right-0 h-0.5 bg-brand-700 group-hover:bg-brand-400 transition-colors duration-300"></div>
 
