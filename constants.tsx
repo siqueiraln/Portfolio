@@ -54,6 +54,14 @@ export const PROJECTS: Project[] = [
     demoUrl: 'https://noxapp.vercel.app'
   },
   {
+    id: '3',
+    title: 'Aura Extension',
+    category: 'Chrome Extension',
+    description: 'Extensão Chrome com Side Panel para atendimento inteligente a estudantes e colaboradores. Integrada ao n8n para busca por IA e autenticação via Xano. Responde dúvidas em tempo real sem sair do navegador.',
+    imageUrl: '/aura.png',
+    techStack: ['TypeScript', 'Vite', 'Chrome Extension', 'n8n', 'Xano'],
+  },
+  {
     id: '2',
     title: 'AdMetrics',
     category: 'MarTech',
