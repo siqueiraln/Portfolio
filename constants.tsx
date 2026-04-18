@@ -93,7 +93,7 @@ export const PROJECTS: Project[] = [
     description: 'Plataforma de agendamento online para barbearias e profissionais de serviço. Resolve o caos de agenda por WhatsApp: o profissional compartilha um link único e o cliente agenda em 3 cliques, sem baixar app nem criar conta.',
     imageUrl: '/nox.jpeg',
     techStack: ['Next.js', 'Supabase', 'TypeScript', 'Tailwind CSS', 'SaaS', 'Agendamento'],
-    demoUrl: 'https://noxapp.vercel.app'
+    demoUrl: 'https://noxapp.vercel.app/barbearia-exemplar'
   },
   {
     id: '3',
