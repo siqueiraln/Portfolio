@@ -54,6 +54,15 @@ export const PROJECTS: Project[] = [
     demoUrl: 'https://noxapp.vercel.app'
   },
   {
+    id: '2',
+    title: 'AdMetrics',
+    category: 'MarTech',
+    description: 'Ferramenta para analistas de tráfego calcularem CPM, CPC, CPA, CTR e ROAS automaticamente. Compara campanhas com benchmarks de Meta, Google e TikTok e gera diagnósticos via IA — sem planilhas.',
+    imageUrl: '/admetrics.png',
+    techStack: ['React', 'Vite', 'Recharts', 'Groq AI', 'Tailwind CSS', 'JavaScript'],
+    demoUrl: 'https://admetrics-phi.vercel.app'
+  },
+  {
     id: '4',
     title: 'InfoEduc',
     category: 'EdTech',
