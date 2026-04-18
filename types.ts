@@ -1,5 +1,18 @@
 import React from 'react';
 
+export interface ProjectDetails {
+  headline: string;
+  sections: {
+    icon: string;
+    title: string;
+    content: string;
+  }[];
+  cta?: {
+    label: string;
+    url: string;
+  }[];
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -8,6 +21,7 @@ export interface Project {
   imageUrl: string;
   techStack: string[];
   demoUrl?: string;
+  details?: ProjectDetails;
 }
 
 export interface Solution {

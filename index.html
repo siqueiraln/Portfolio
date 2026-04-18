@@ -168,6 +168,12 @@
     .delay-400 { transition-delay: 0.4s; }
     .delay-500 { transition-delay: 0.5s; }
 
+    /* ── Modal animation ── */
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.95) translateY(8px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
     /* ── Float animations ── */
     @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
     @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }

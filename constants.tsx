@@ -45,6 +45,74 @@ export const ABOUT_TEXT = [
 
 export const PROJECTS: Project[] = [
   {
+    id: '5',
+    title: 'Afiliados ML + Shopee',
+    category: 'Automação',
+    description: 'Sistema n8n que captura ofertas do Mercado Livre e Shopee, gera links de afiliado e publica automaticamente no Telegram e WhatsApp — com copy gerada por IA a cada execução.',
+    imageUrl: '/afiliados.png',
+    techStack: ['n8n', 'Docker', 'Supabase', 'Redis', 'Evolution API', 'Groq AI'],
+    details: {
+      headline: 'Automação completa que captura ofertas do Mercado Livre e Shopee e publica no Telegram e WhatsApp com copy gerada por IA — enquanto você dorme.',
+      sections: [
+        {
+          icon: '🐳',
+          title: 'Stack Docker pronta em 1 comando',
+          content: 'n8n, Redis, Evolution API e Postgres sobem juntos com docker compose up -d. Sem instalar dependências na mão, sem configurar servidor do zero. Em menos de 10 minutos você tem toda a infraestrutura rodando na sua VPS.'
+        },
+        {
+          icon: '🕷️',
+          title: 'Scraping cirúrgico do Mercado Livre',
+          content: 'O sistema acessa o ML Afiliados autenticado via cookie de sessão real e varre as melhores ofertas do dia automaticamente. Um workflow dedicado renova o cookie de forma autônoma — depois do setup inicial, zero intervenção manual.'
+        },
+        {
+          icon: '📱',
+          title: 'WhatsApp real via Evolution API',
+          content: 'Conecta um número dedicado ao grupo via QR Code. Sem custo por mensagem, sem API oficial cara. As ofertas chegam com formatação nativa, como se um humano tivesse enviado — porque a Evolution roda em container próprio dentro da sua stack.'
+        },
+        {
+          icon: '🤖',
+          title: 'IA que escreve o hook de cada oferta',
+          content: 'Nenhuma mensagem sai genérica. Groq (Llama 3.3 70B) e Google Gemini processam cada oferta e geram título de impacto, preço formatado, CTA e link de afiliado — copy diferente a cada execução, calibrada pra converter.'
+        },
+        {
+          icon: '💰',
+          title: 'Quer essa automação trabalhando pra você?',
+          content: 'O pacote completo está à venda — workflows prontos, Docker Compose, schema SQL e documentação detalhada. Entra no canal ou no grupo pra ver as ofertas chegando em tempo real, ou fala comigo pra montar na sua infraestrutura.'
+        }
+      ],
+      cta: [
+        { label: 'Canal no Telegram', url: 'https://t.me/primodaspromo' },
+        { label: 'Grupo no WhatsApp', url: 'https://chat.whatsapp.com/LUSqY1Fap8PFQZyw3n3SKa?mode=gi_t' }
+      ]
+    }
+  },
+  {
+    id: '1',
+    title: 'NOX',
+    category: 'SaaS',
+    description: 'Plataforma de agendamento online para barbearias e profissionais de serviço. Resolve o caos de agenda por WhatsApp: o profissional compartilha um link único e o cliente agenda em 3 cliques, sem baixar app nem criar conta.',
+    imageUrl: '/nox.jpeg',
+    techStack: ['Next.js', 'Supabase', 'TypeScript', 'Tailwind CSS', 'SaaS', 'Agendamento'],
+    demoUrl: 'https://noxapp.vercel.app'
+  },
+  {
+    id: '3',
+    title: 'Aura Extension',
+    category: 'Chrome Extension',
+    description: 'Extensão Chrome com Side Panel para atendimento inteligente a estudantes e colaboradores. Base de conhecimento no Pinecone com n8n como intermediador de IA e autenticação via Xano. Responde dúvidas em tempo real sem sair do navegador.',
+    imageUrl: '/aura.png',
+    techStack: ['TypeScript', 'Vite', 'Chrome Extension', 'n8n', 'Xano'],
+  },
+  {
+    id: '2',
+    title: 'AdMetrics',
+    category: 'MarTech',
+    description: 'Ferramenta para analistas de tráfego calcularem CPM, CPC, CPA, CTR e ROAS automaticamente. Compara campanhas com benchmarks de Meta, Google e TikTok e gera diagnósticos via IA — sem planilhas.',
+    imageUrl: '/admetrics.png',
+    techStack: ['React', 'Vite', 'Recharts', 'Groq AI', 'Tailwind CSS', 'JavaScript'],
+    demoUrl: 'https://admetrics-phi.vercel.app'
+  },
+  {
     id: '4',
     title: 'InfoEduc',
     category: 'EdTech',
