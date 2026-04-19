@@ -101,7 +101,37 @@ export const PROJECTS: Project[] = [
     category: 'Chrome Extension',
     description: 'Extensão Chrome com Side Panel para atendimento inteligente a estudantes e colaboradores. Base de conhecimento no Pinecone com n8n como intermediador de IA e autenticação via Xano. Responde dúvidas em tempo real sem sair do navegador.',
     imageUrl: '/aura.png',
-    techStack: ['TypeScript', 'Vite', 'Chrome Extension', 'n8n', 'Xano'],
+    techStack: ['TypeScript', 'Vite', 'Chrome Extension', 'n8n', 'Xano', 'Pinecone'],
+    details: {
+      headline: 'Assistente de atendimento inteligente no Side Panel do Chrome — responde dúvidas de estudantes e colaboradores em tempo real, sem sair do navegador.',
+      sections: [
+        {
+          icon: '🧩',
+          title: 'Side Panel nativo do Chrome',
+          content: 'A Aura roda diretamente no painel lateral do Chrome, sem abrir novas abas, sem popup, sem atrapalhar o fluxo. O usuário continua navegando enquanto tira dúvidas — a experiência é fluida e integrada ao navegador.'
+        },
+        {
+          icon: '🔐',
+          title: 'Autenticação com trava de falhas via Xano',
+          content: 'O login é gerenciado pelo Xano como backend cloud. Tentativas mal-sucedidas são contadas e o acesso é bloqueado automaticamente na 5ª falha — sem precisar de servidor próprio, sem gambiarras.'
+        },
+        {
+          icon: '🧠',
+          title: 'Base de conhecimento no Pinecone',
+          content: 'Todo o conteúdo de suporte fica indexado no Pinecone como embeddings vetoriais. Quando alguém pergunta, o n8n faz a busca semântica na base, encontra a resposta mais relevante e devolve via IA — sem depender de correspondência exata de palavras.'
+        },
+        {
+          icon: '⚡',
+          title: 'n8n como motor de IA',
+          content: 'O n8n recebe a pergunta, consulta o Pinecone, monta o contexto e dispara o modelo de linguagem. Toda a lógica de orquestração fica no workflow — fácil de atualizar, fácil de escalar, sem tocar no código da extensão.'
+        },
+        {
+          icon: '🏗️',
+          title: 'Arquitetura TypeScript modular',
+          content: 'Construída com TypeScript em OOP puro, compilada pelo Vite. Cada interface — Chat, Login, Feedback — é uma classe isolada. Sem React, sem peso desnecessário: apenas DOM manipulado com precisão cirúrgica.'
+        }
+      ]
+    }
   },
   {
     id: '2',
