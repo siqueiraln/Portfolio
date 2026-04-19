@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
             {/* Photo */}
             <div className="absolute inset-0 m-6 clip-notch overflow-hidden border border-brand-700/50 shadow-2xl bg-brand-900/50">
               <img
-                src="/Professional_studio_headshot,_202604171912.png"
+                src="/headshot.png"
                 alt={PERSONAL_INFO.name}
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
               />
