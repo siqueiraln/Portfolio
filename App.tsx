@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import ChatWidget from './components/ChatWidget';
 import useScrollReveal from './hooks/useScrollReveal';
+import { SectionId } from './types';
+
+const About = React.lazy(() => import('./components/About'));
+const Projects = React.lazy(() => import('./components/Projects'));
+const Contact = React.lazy(() => import('./components/Contact'));
+const ChatWidget = React.lazy(() => import('./components/ChatWidget'));
+
+const ComponentFallback = () => <div className="h-96 bg-[#070f2b]" />;
 
 const App: React.FC = () => {
   useScrollReveal();
@@ -17,11 +21,25 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Skills />
-        <About />
-        <Projects />
+        <div id={SectionId.ABOUT}>
+          <Suspense fallback={<ComponentFallback />}>
+            <About />
+          </Suspense>
+        </div>
+        <div id={SectionId.PROJECTS}>
+          <Suspense fallback={<ComponentFallback />}>
+            <Projects />
+          </Suspense>
+        </div>
       </main>
-      <Contact />
-      <ChatWidget />
+      <div id={SectionId.CONTACT}>
+        <Suspense fallback={null}>
+          <Contact />
+        </Suspense>
+      </div>
+      <Suspense fallback={null}>
+        <ChatWidget />
+      </Suspense>
     </div>
   );
 };

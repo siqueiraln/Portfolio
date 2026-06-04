@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ExternalLink, Info } from 'lucide-react';
 import { PROJECTS } from '../constants';
-import { Project, SectionId } from '../types';
+import { Project } from '../types';
 import ProjectModal from './ProjectModal';
 
 const Projects: React.FC = () => {
@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
   }, [selectedProject]);
 
   return (
-    <section id={SectionId.PROJECTS} className="py-24 relative bg-[#070f2b]">
+    <section className="py-24 relative bg-[#070f2b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -49,6 +49,7 @@ const Projects: React.FC = () => {
                   <img
                     src={project.imageUrl}
                     alt={project.title}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-transparent to-transparent"></div>

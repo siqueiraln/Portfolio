@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Mail, Linkedin, Instagram, ArrowUp, Github, Facebook } from 'lucide-react';
-import { SectionId } from '../types';
 import { PERSONAL_INFO } from '../constants';
 
 const Contact: React.FC = () => {
@@ -20,7 +19,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <footer id={SectionId.CONTACT} className="bg-[#0d1535] pt-24 pb-12 border-t border-brand-800/50">
+    <footer className="bg-[#0d1535] pt-24 pb-12 border-t border-brand-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="grid md:grid-cols-2 gap-12 mb-16 reveal fade-only">

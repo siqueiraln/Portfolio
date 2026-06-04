@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
     title: 'Afiliados ML + Shopee',
     category: 'Automação',
     description: 'Sistema n8n que captura ofertas do Mercado Livre e Shopee, gera links de afiliado e publica automaticamente no Telegram e WhatsApp — com copy gerada por IA a cada execução.',
-    imageUrl: '/afiliados.png',
+    imageUrl: '/afiliados.webp',
     techStack: ['n8n', 'Docker', 'Supabase', 'Redis', 'Evolution API', 'Groq AI'],
     details: {
       headline: 'Automação completa que captura ofertas do Mercado Livre e Shopee e publica no Telegram e WhatsApp com copy gerada por IA — enquanto você dorme.',
@@ -91,7 +91,7 @@ export const PROJECTS: Project[] = [
     title: 'NOX',
     category: 'SaaS',
     description: 'Plataforma de agendamento online para barbearias e profissionais de serviço. Resolve o caos de agenda por WhatsApp: o profissional compartilha um link único e o cliente agenda em 3 cliques, sem baixar app nem criar conta.',
-    imageUrl: '/nox.jpeg',
+    imageUrl: '/nox.webp',
     techStack: ['Next.js', 'Supabase', 'TypeScript', 'Tailwind CSS', 'SaaS', 'Agendamento'],
     demoUrl: 'https://noxapp.vercel.app/barbearia-exemplar'
   },
@@ -100,7 +100,7 @@ export const PROJECTS: Project[] = [
     title: 'Aura Extension',
     category: 'Chrome Extension',
     description: 'Extensão Chrome com Side Panel para atendimento inteligente a estudantes e colaboradores. Base de conhecimento no Pinecone com n8n como intermediador de IA e autenticação via Xano. Responde dúvidas em tempo real sem sair do navegador.',
-    imageUrl: '/aura.png',
+    imageUrl: '/aura.webp',
     techStack: ['TypeScript', 'Vite', 'Chrome Extension', 'n8n', 'Xano', 'Pinecone'],
     details: {
       headline: 'Assistente de atendimento inteligente no Side Panel do Chrome — responde dúvidas de estudantes e colaboradores em tempo real, sem sair do navegador.',
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
     title: 'AdMetrics',
     category: 'MarTech',
     description: 'Ferramenta para analistas de tráfego calcularem CPM, CPC, CPA, CTR e ROAS automaticamente. Compara campanhas com benchmarks de Meta, Google e TikTok e gera diagnósticos via IA — sem planilhas.',
-    imageUrl: '/admetrics.png',
+    imageUrl: '/admetrics.webp',
     techStack: ['React', 'Vite', 'Recharts', 'Groq AI', 'Tailwind CSS', 'JavaScript'],
     demoUrl: 'https://admetrics-phi.vercel.app'
   },
@@ -147,7 +147,7 @@ export const PROJECTS: Project[] = [
     title: 'InfoEduc',
     category: 'EdTech',
     description: 'Atuo diretamente no desenvolvimento da plataforma, construindo integrações sólidas, criando novas funcionalidades e otimizando fluxos antigos para deixar o sistema mais performático e escalável.',
-    imageUrl: '/infoeduc.png',
+    imageUrl: '/infoeduc.webp',
     techStack: ['Plataforma Web', 'Educação'],
     demoUrl: 'https://infoeduc.com.br/'
   }

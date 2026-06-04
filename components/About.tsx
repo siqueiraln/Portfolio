@@ -1,10 +1,9 @@
 import React from 'react';
-import { SectionId } from '../types';
 import { ABOUT_TEXT } from '../constants';
 
 const About: React.FC = () => {
   return (
-    <section id={SectionId.ABOUT} className="py-24 bg-[#0d1535] relative overflow-hidden">
+    <section className="py-24 bg-[#0d1535] relative overflow-hidden">
       {/* Ambient glow */}
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-800/15 rounded-full blur-[100px] -z-10"></div>
 

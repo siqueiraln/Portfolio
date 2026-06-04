@@ -106,8 +106,10 @@ const Hero: React.FC = () => {
             {/* Photo */}
             <div className="absolute inset-0 m-6 clip-notch overflow-hidden border border-brand-700/50 shadow-2xl bg-brand-900/50">
               <img
-                src="/headshot.png"
+                src="/headshot.webp"
                 alt={PERSONAL_INFO.name}
+                fetchPriority="high"
+                loading="eager"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#070f2b]/70 via-transparent to-transparent" />
