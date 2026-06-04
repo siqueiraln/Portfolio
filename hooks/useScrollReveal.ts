@@ -18,11 +18,29 @@ const useScrollReveal = () => {
       }
     );
 
-    // Observa todos os elementos com classe .reveal
-    const elements = document.querySelectorAll('.reveal');
-    elements.forEach((el) => observer.observe(el));
+    // Função para observar novos elementos que aparecerem
+    const observeElements = () => {
+      const elements = document.querySelectorAll('.reveal:not(.visible)');
+      elements.forEach((el) => observer.observe(el));
+    };
 
-    return () => observer.disconnect();
+    // Observação inicial
+    observeElements();
+
+    // Observa mudanças no DOM para detectar quando seções Lazy-loaded são montadas
+    const mutationObserver = new MutationObserver(() => {
+      observeElements();
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+    };
   }, []);
 };
 
