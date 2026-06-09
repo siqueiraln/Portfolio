@@ -28,11 +28,14 @@ const useScrollReveal = () => {
     observeElements();
 
     // Observa mudanças no DOM para detectar quando seções Lazy-loaded são montadas
+    let debounceTimer: ReturnType<typeof setTimeout>;
     const mutationObserver = new MutationObserver(() => {
-      observeElements();
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(observeElements, 100);
     });
 
-    mutationObserver.observe(document.body, {
+    const root = document.getElementById('root') ?? document.body;
+    mutationObserver.observe(root, {
       childList: true,
       subtree: true,
     });

@@ -5,7 +5,7 @@ const About: React.FC = () => {
   return (
     <section className="py-24 bg-[#0d1535] relative overflow-hidden">
       {/* Ambient glow */}
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-800/15 rounded-full blur-[100px] -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-800/15 rounded-full blur-[60px] -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 

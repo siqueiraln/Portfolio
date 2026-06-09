@@ -35,7 +35,7 @@ export default {
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        wiggle:       'wiggle 1s ease-in-out infinite',
+        wiggle:       'wiggle 2.5s ease-in-out infinite',
       }
     },
   },

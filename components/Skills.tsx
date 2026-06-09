@@ -6,7 +6,7 @@ const Skills: React.FC = () => {
   return (
     <section id={SectionId.SKILLS} className="py-24 bg-[#0d1535] relative overflow-hidden">
       {/* Ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-brand-800/20 rounded-full blur-[100px] -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-brand-800/20 rounded-full blur-[60px] -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 

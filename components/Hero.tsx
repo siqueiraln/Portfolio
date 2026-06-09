@@ -26,10 +26,10 @@ const Hero: React.FC = () => {
       }} />
 
       {/* Ambient glows */}
-      <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full blur-[140px] -z-10"
-        style={{ background: 'radial-gradient(circle, rgba(83,92,145,0.35) 0%, transparent 70%)' }} />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-[100px] -z-10"
-        style={{ background: 'radial-gradient(circle, rgba(27,26,85,0.4) 0%, transparent 70%)' }} />
+      <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full blur-[80px] -z-10"
+        style={{ background: 'radial-gradient(circle, rgba(83,92,145,0.3) 0%, transparent 70%)' }} />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-[60px] -z-10"
+        style={{ background: 'radial-gradient(circle, rgba(27,26,85,0.35) 0%, transparent 70%)' }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
@@ -96,8 +96,8 @@ const Hero: React.FC = () => {
             style={{ height: '460px', animation: 'heroSlideRight 0.8s ease both', animationDelay: '0.3s' }}>
 
             {/* Glow behind photo */}
-            <div className="absolute inset-0 rounded-full blur-[80px] -z-10"
-              style={{ background: 'radial-gradient(circle, rgba(83,92,145,0.45) 0%, rgba(27,26,85,0.25) 45%, transparent 70%)' }} />
+            <div className="absolute inset-0 rounded-full blur-[50px] -z-10"
+              style={{ background: 'radial-gradient(circle, rgba(83,92,145,0.4) 0%, rgba(27,26,85,0.2) 45%, transparent 70%)' }} />
 
             {/* Corner brackets */}
             <div className="absolute -top-2 -left-2 w-7 h-7 border-t-2 border-l-2 border-brand-400 z-20" />
@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
               <div key={tool.name} className={`${tool.float} absolute z-20`}
                 style={{ top: tool.top, bottom: tool.bottom, left: tool.left, right: tool.right }}>
                 <div className="clip-chamfer flex flex-col items-center justify-center w-13 h-13 border shadow-lg"
-                  style={{ width: '52px', height: '52px', background: 'rgba(11,16,48,0.9)', borderColor: 'rgba(146,144,195,0.3)', backdropFilter: 'blur(8px)' }}>
+                  style={{ width: '52px', height: '52px', background: 'rgba(11,16,48,0.95)', borderColor: 'rgba(146,144,195,0.3)', willChange: 'transform' }}>
                   <span className="font-display text-[11px] font-bold text-brand-300 leading-none">{tool.abbr}</span>
                   <span className="text-[8px] text-slate-500 mt-0.5 leading-none">{tool.name}</span>
                 </div>
@@ -130,7 +130,7 @@ const Hero: React.FC = () => {
             {/* Stat card */}
             <div className="float-b absolute -bottom-5 -left-8 z-20">
               <div className="clip-chamfer px-4 py-3 border shadow-xl flex items-center gap-3"
-                style={{ background: 'rgba(7,15,43,0.95)', borderColor: 'rgba(83,92,145,0.5)', backdropFilter: 'blur(12px)' }}>
+                style={{ background: 'rgba(7,15,43,0.98)', borderColor: 'rgba(83,92,145,0.5)', willChange: 'transform' }}>
                 <div className="w-1 h-8 bg-brand-400 flex-shrink-0" />
                 <div>
                   <div className="font-display text-brand-300 text-xl font-bold leading-none">4+</div>

@@ -66,11 +66,11 @@ body {
 @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
 @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
 @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-.float-a { animation: floatA 3.5s ease-in-out infinite; }
-.float-b { animation: floatB 4.2s ease-in-out infinite 0.6s; }
-.float-c { animation: floatC 3.8s ease-in-out infinite 1.2s; }
-.float-d { animation: floatB 4.5s ease-in-out infinite 0.3s; }
-.float-e { animation: floatA 3.2s ease-in-out infinite 0.9s; }
+.float-a { animation: floatA 3.5s ease-in-out infinite; will-change: transform; }
+.float-b { animation: floatB 4.2s ease-in-out infinite 0.6s; will-change: transform; }
+.float-c { animation: floatC 3.8s ease-in-out infinite 1.2s; will-change: transform; }
+.float-d { animation: floatB 4.5s ease-in-out infinite 0.3s; will-change: transform; }
+.float-e { animation: floatA 3.2s ease-in-out infinite 0.9s; will-change: transform; }
 
 /* ── Corner accent helper ── */
 .corner-br::after {
