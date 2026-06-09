@@ -42,5 +42,6 @@ export enum SectionId {
   ABOUT = 'about',
   SKILLS = 'skills', // Mantido o ID 'skills' para preservar a navegação existente
   PROJECTS = 'projects',
+  FAQ = 'faq',
   CONTACT = 'contact',
 }

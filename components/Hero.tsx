@@ -4,11 +4,11 @@ import { SectionId } from '../types';
 import { PERSONAL_INFO } from '../constants';
 
 const tools = [
-  { name: 'Bubble',     abbr: 'Bu',  float: 'float-a', top: '5%',    left: '0%'   },
-  { name: 'n8n',        abbr: 'n8n', float: 'float-b', top: '20%',   right: '-6%' },
-  { name: 'WhatsApp',   abbr: 'WA',  float: 'float-c', top: '54%',   right: '-6%' },
-  { name: 'JavaScript', abbr: 'JS',  float: 'float-d', bottom: '20%', left: '0%'  },
-  { name: 'IA',         abbr: 'IA',  float: 'float-e', bottom: '4%',  right: '-4%' },
+  { name: 'Web',      abbr: 'Web', float: 'float-a', top: '5%',    left: '0%'   },
+  { name: 'n8n',      abbr: 'n8n', float: 'float-b', top: '20%',   right: '-6%' },
+  { name: 'WhatsApp', abbr: 'WA',  float: 'float-c', top: '54%',   right: '-6%' },
+  { name: 'Suporte',  abbr: 'TI',  float: 'float-d', bottom: '20%', left: '0%'  },
+  { name: 'IA',       abbr: 'IA',  float: 'float-e', bottom: '4%',  right: '-4%' },
 ];
 
 const Hero: React.FC = () => {
@@ -45,17 +45,19 @@ const Hero: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white uppercase leading-[0.95] tracking-tight mb-1"
-              style={{ animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.25s' }}>
-              Desenvolvedor
-            </h1>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl uppercase leading-[0.95] tracking-tight mb-1"
-              style={{ color: '#9290c3', animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.4s' }}>
-              No-Code
-            </h1>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white uppercase leading-[0.95] tracking-tight mb-8"
-              style={{ animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.55s' }}>
-              &amp; IA
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl uppercase leading-[0.95] tracking-tight mb-8">
+              <span className="block text-white mb-1"
+                style={{ animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.25s' }}>
+                Parceiro de
+              </span>
+              <span className="block mb-1"
+                style={{ color: '#9290c3', animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.4s' }}>
+                Tecnologia
+              </span>
+              <span className="block text-white"
+                style={{ animation: 'heroSlideUp 0.6s ease both', animationDelay: '0.55s' }}>
+                para PMEs.
+              </span>
             </h1>
 
             <div className="flex items-center gap-3 mb-6"

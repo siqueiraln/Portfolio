@@ -1,11 +1,11 @@
 import React from 'react';
-import { Zap, Rocket, Link } from 'lucide-react';
+import { Zap, Globe, Wrench, Cpu, LayoutGrid } from 'lucide-react';
 import { Project, Solution } from './types';
 
 export const PERSONAL_INFO = {
   name: "Lucas Siqueira",
-  role: "Desenvolvedor No-Code & Especialista em Automação com n8n e IA",
-  bio: "Desenvolvedor No-Code especialista em Bubble e automação com n8n. Construo soluções digitais que eliminam processos manuais, integram sistemas e escalam negócios — sem gambiarras. Atendo presencial em Simão Dias/SE e remoto em todo o Brasil.",
+  role: "Parceiro de Tecnologia para Empresas em Simão Dias, SE",
+  bio: "Parceiro de tecnologia completo para empresas em Simão Dias/SE e região. Resolvo tudo que é tecnologia do seu negócio: sites, automações com n8n e IA, manutenção de computadores, consultoria de hardware e serviços online. Atendimento presencial e remoto em todo o Brasil.",
   email: "lucas.sikeira78@gmail.com",
   socials: {
     linkedin: "https://www.linkedin.com/in/lucas-siqueira-1a5bb51b2/",
@@ -18,29 +18,41 @@ export const PERSONAL_INFO = {
 
 export const SOLUTIONS: Solution[] = [
   {
+    id: 'web',
+    title: 'Desenvolvimento Web',
+    description: 'Sites, landing pages, sistemas e MVPs para sua empresa. Do projeto simples ao sistema completo — entrego com qualidade profissional e sem enrolação.',
+    icon: <Globe className="w-7 h-7 text-white" />
+  },
+  {
     id: 'automation',
     title: 'Automação com n8n e IA',
-    description: 'Elimine tarefas repetitivas com automações no n8n, Make e IA. Conecte sistemas, dispare ações automáticas e libere sua equipe para o que realmente importa.',
+    description: 'Elimine tarefas repetitivas. Conecto sistemas, automatizo fluxos de WhatsApp, e-mail, CRM e muito mais — sua equipe livre para o que realmente importa.',
     icon: <Zap className="w-7 h-7 text-white" />
   },
   {
-    id: 'mvp',
-    title: 'MVP e SaaS no Bubble',
-    description: 'Valide sua ideia em semanas com Bubble. Lance seu produto digital com velocidade, qualidade profissional e sem precisar de uma equipe de devs.',
-    icon: <Rocket className="w-7 h-7 text-white" />
+    id: 'saas-consulting',
+    title: 'Consultoria de Serviços Online',
+    description: 'Não sabe quais ferramentas e assinaturas valem para sua empresa? Analiso seu negócio e indico o que realmente faz sentido — sem pagar por o que não usa.',
+    icon: <LayoutGrid className="w-7 h-7 text-white" />
   },
   {
-    id: 'integrations',
-    title: 'Integrações Inteligentes',
-    description: 'WhatsApp API, CRMs, gateways de pagamento e APIs externas. Faço seus sistemas conversarem com n8n e entregarem resultados automaticamente.',
-    icon: <Link className="w-7 h-7 text-white" />
-  }
+    id: 'hardware',
+    title: 'Consultoria de Hardware',
+    description: 'Precisa de computador, impressora ou equipamento para a empresa? Indico o ideal para seu orçamento e busco os melhores preços nos maiores marketplaces do Brasil.',
+    icon: <Cpu className="w-7 h-7 text-white" />
+  },
+  {
+    id: 'maintenance',
+    title: 'Manutenção de Computadores',
+    description: 'Formatação, limpeza, troca de peças, aumento de memória e suporte técnico. Computador lento ou com problema? Resolvo presencialmente em Simão Dias e região.',
+    icon: <Wrench className="w-7 h-7 text-white" />
+  },
 ];
 
 export const ABOUT_TEXT = [
-  "Sou desenvolvedor No-Code especialista em Bubble e automação com n8n, baseado em Simão Dias/SE e disponível para projetos remotos em todo o Brasil. Utilizo IA como amplificador do meu trabalho — com ela, não existe barreira técnica que me impeça de entregar qualquer solução que o negócio exija. Para mim, a ferramenta é o meio. O resultado é o que define o jogo.",
-  "Antes de entrar para o desenvolvimento, atuei como técnico em informática, técnico em agronegócio e analista de times profissionais de esports com experiência internacional. Essa trajetória multidisciplinar me deu algo raro: adaptabilidade real, visão estratégica e capacidade de entregar sob pressão — habilidades que levo direto para cada projeto.",
-  "Hoje atuo no mercado de tecnologia com foco em automações com n8n, desenvolvimento de aplicações no Bubble, integrações com WhatsApp API, CRMs e gateways de pagamento. Estou sempre evoluindo: estudo arquiteturas No-Code e High-Code, como JavaScript e Python, para ter um arsenal completo na hora de resolver problemas complexos."
+  "Sou o parceiro de tecnologia para empresas que não têm — e não precisam ter — um setor de TI interno. Baseado em Simão Dias/SE, atendo presencialmente na região e remotamente em todo o Brasil. Resolvo tudo que é tecnologia do seu negócio: do site ao computador, da automação à escolha do software certo. Uma pessoa, solução completa.",
+  "Minha trajetória é multidisciplinar por escolha. Atuei como técnico em informática, técnico em agronegócio e analista de times profissionais de esports com experiência internacional. Essa base me deu algo raro: capacidade de entender o negócio antes de propor solução tecnológica — não vendo ferramenta, entrego resultado.",
+  "Hoje trabalho com desenvolvimento web, automações com n8n e IA, manutenção de computadores, consultoria de hardware e orientação na escolha de serviços online. Uso IA como amplificador: com ela, não existe barreira técnica que me impeça de entregar qualquer solução que seu negócio exija. A tecnologia é o meio. O crescimento da sua empresa é o objetivo."
 ];
 
 export const PROJECTS: Project[] = [

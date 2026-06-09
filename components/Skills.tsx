@@ -14,19 +14,19 @@ const Skills: React.FC = () => {
         <div className="text-left mb-16 reveal from-left">
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="w-6 h-px bg-brand-400" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-400">// O que eu resolvo</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-400">// Serviços</span>
           </div>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold text-white uppercase tracking-tight leading-tight">
-            Não vendo código.<br />
-            <span className="text-brand-400">Entrego soluções.</span>
+            Tudo de tecnologia<br />
+            <span className="text-brand-400">que sua empresa precisa.</span>
           </h2>
           <p className="text-slate-400 text-base mt-4 max-w-2xl">
-            Soluções estratégicas que economizam tempo e geram receita.
+            Do site ao suporte técnico — atendimento completo, presencial em Simão Dias/SE e remoto em todo o Brasil.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {SOLUTIONS.map((solution, index) => (
             <div
               key={solution.id}

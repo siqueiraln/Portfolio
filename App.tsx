@@ -7,6 +7,7 @@ import { SectionId } from './types';
 
 const About = React.lazy(() => import('./components/About'));
 const Projects = React.lazy(() => import('./components/Projects'));
+const FAQ = React.lazy(() => import('./components/FAQ'));
 const Contact = React.lazy(() => import('./components/Contact'));
 const ChatWidget = React.lazy(() => import('./components/ChatWidget'));
 
@@ -29,6 +30,11 @@ const App: React.FC = () => {
         <div id={SectionId.PROJECTS}>
           <Suspense fallback={<ComponentFallback />}>
             <Projects />
+          </Suspense>
+        </div>
+        <div id={SectionId.FAQ}>
+          <Suspense fallback={<ComponentFallback />}>
+            <FAQ />
           </Suspense>
         </div>
       </main>
