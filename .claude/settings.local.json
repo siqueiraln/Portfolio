@@ -3,5 +3,8 @@
     "allow": [
       "WebFetch(domain:showcase.fetchbuild.com)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "supabase"
+  ]
 }
