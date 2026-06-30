@@ -7,7 +7,9 @@ const useScrollReveal = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const el = entry.target as HTMLElement;
-            el.classList.add('visible');
+            // Atributo (não classe) para sobreviver a re-renders do React, que
+            // reescrevem className inteiro e apagariam uma classe imperativa.
+            el.setAttribute('data-revealed', '');
             // Não desanima ao sair da viewport — efeito one-shot
             observer.unobserve(el);
             // Libera a camada de composição (will-change) quando a transição termina,
@@ -27,7 +29,7 @@ const useScrollReveal = () => {
 
     // Função para observar novos elementos que aparecerem
     const observeElements = () => {
-      const elements = document.querySelectorAll('.reveal:not(.visible)');
+      const elements = document.querySelectorAll('.reveal:not([data-revealed])');
       elements.forEach((el) => observer.observe(el));
     };
 
