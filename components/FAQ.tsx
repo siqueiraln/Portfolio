@@ -64,7 +64,7 @@ const FAQ: React.FC = () => {
   const toggle = (i: number) => setOpenIndex(prev => (prev === i ? null : i));
 
   return (
-    <section id={SectionId.FAQ} className="py-24 bg-[#0d1535] relative overflow-hidden">
+    <section id={SectionId.FAQ} className="py-24 bg-bg relative overflow-hidden">
       {/* Schema injection */}
       <script
         type="application/ld+json"
@@ -72,21 +72,21 @@ const FAQ: React.FC = () => {
       />
 
       {/* Ambient glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-800/15 rounded-full blur-[60px] -z-10" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/[0.06] rounded-full blur-[80px] -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="text-left mb-14 reveal from-left">
           <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-6 h-px bg-brand-400" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-400">// Perguntas frequentes</span>
+            <div className="w-6 h-px bg-accent" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Perguntas frequentes</span>
           </div>
-          <h2 className="font-display text-3xl md:text-5xl font-extrabold text-white uppercase tracking-tight leading-tight">
+          <h2 className="font-display text-3xl md:text-5xl text-ink uppercase tracking-tight leading-tight">
             Dúvidas comuns<br />
-            <span className="text-brand-400">respondidas.</span>
+            <span className="text-accent">respondidas.</span>
           </h2>
-          <p className="text-slate-400 text-base mt-4 max-w-2xl">
+          <p className="text-muted text-base mt-4 max-w-2xl">
             Se a sua dúvida não estiver aqui, manda mensagem no WhatsApp — respondo no mesmo dia.
           </p>
         </div>
@@ -98,30 +98,21 @@ const FAQ: React.FC = () => {
             return (
               <div
                 key={i}
-                className={`reveal delay-${Math.min((i % 5 + 1) * 100, 500)} relative clip-notch transition-all duration-300`}
-                style={{
-                  background: '#070f2b',
-                  border: `1px solid ${isOpen ? 'rgba(146,144,195,0.45)' : 'rgba(83,92,145,0.2)'}`,
-                  boxShadow: isOpen ? '0 8px 32px rgba(0,0,0,0.5)' : 'none',
-                }}
+                className={`reveal delay-${Math.min((i % 5 + 1) * 100, 500)} relative rounded-xl bg-card border transition-all duration-300 ${
+                  isOpen ? 'border-line-strong shadow-card' : 'border-line'
+                }`}
               >
-                {/* Top accent — visible only when open */}
-                <div
-                  className="absolute top-0 left-0 right-0 h-0.5 transition-colors duration-300"
-                  style={{ background: isOpen ? '#9290c3' : 'rgba(83,92,145,0.2)' }}
-                />
-
                 {/* Question */}
                 <button
                   onClick={() => toggle(i)}
                   className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left group"
                   aria-expanded={isOpen}
                 >
-                  <span className={`text-sm font-semibold leading-snug transition-colors duration-200 ${isOpen ? 'text-brand-300' : 'text-white group-hover:text-brand-300'}`}>
+                  <span className={`text-sm font-semibold leading-snug transition-colors duration-200 ${isOpen ? 'text-accent' : 'text-ink group-hover:text-accent'}`}>
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 flex-shrink-0 mt-0.5 transition-all duration-300 ${isOpen ? 'text-brand-400 rotate-180' : 'text-slate-500 group-hover:text-brand-400'}`}
+                    className={`w-5 h-5 flex-shrink-0 mt-0.5 transition-all duration-300 ${isOpen ? 'text-accent rotate-180' : 'text-subtle group-hover:text-accent'}`}
                   />
                 </button>
 
@@ -130,20 +121,10 @@ const FAQ: React.FC = () => {
                   className="overflow-hidden transition-all duration-300"
                   style={{ maxHeight: isOpen ? '400px' : '0px' }}
                 >
-                  <p className="px-6 pb-6 text-slate-400 text-sm leading-relaxed border-t border-brand-800/40 pt-4">
+                  <p className="px-6 pb-6 text-muted text-sm leading-relaxed border-t border-line pt-4">
                     {faq.a}
                   </p>
                 </div>
-
-                {/* Corner accent */}
-                <div
-                  className="absolute bottom-0 right-0 w-4 h-4 transition-opacity duration-300"
-                  style={{
-                    background: '#9290c3',
-                    clipPath: 'polygon(100% 0, 100% 100%, 0 100%)',
-                    opacity: isOpen ? 0.8 : 0.3,
-                  }}
-                />
               </div>
             );
           })}

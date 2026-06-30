@@ -2,90 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ──────────────────────────────────────────────
+   Theme tokens — values are space-separated RGB
+   channels so Tailwind's <alpha-value> works.
+   Light is the default; .dark overrides.
+   ────────────────────────────────────────────── */
+:root {
+  --bg:           255 255 255;
+  --surface:      245 246 251;
+  --card:         255 255 255;
+  --line:         229 231 240;
+  --line-strong:  210 214 228;
+  --ink:          15 18 48;
+  --muted:        81 86 111;
+  --subtle:       106 111 136;
+  --accent:       58 63 143;
+  --accent-hover: 47 52 121;
+  --accent-soft:  236 238 251;
+  --on-accent:    255 255 255;
+  --shadow:       17 22 51;
+}
+
+.dark {
+  --bg:           11 16 32;
+  --surface:      14 20 40;
+  --card:         20 26 49;
+  --line:         39 45 73;
+  --line-strong:  57 64 106;
+  --ink:          238 240 251;
+  --muted:        182 186 210;
+  --subtle:       139 144 173;
+  --accent:       143 141 224;
+  --accent-hover: 165 163 234;
+  --accent-soft:  29 33 71;
+  --on-accent:    11 16 32;
+  --shadow:       0 0 0;
+}
+
+html {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
 body {
   font-family: 'Inter', sans-serif;
+  background-color: rgb(var(--bg));
+  color: rgb(var(--ink));
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ── Gaming clip-path helpers ── */
-.clip-chamfer {
-  clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
-}
-.clip-notch {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
-}
-.clip-badge {
-  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
-}
-.clip-chamfer-sm {
-  clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
-}
+/* ── Scrollbar (theme-aware) ── */
+::-webkit-scrollbar       { width: 8px; }
+::-webkit-scrollbar-track { background: rgb(var(--surface)); }
+::-webkit-scrollbar-thumb { background: rgb(var(--line-strong)); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgb(var(--accent)); }
 
-/* ── Scrollbar ── */
-::-webkit-scrollbar       { width: 6px; }
-::-webkit-scrollbar-track { background: #070f2b; }
-::-webkit-scrollbar-thumb { background: #535c91; }
-::-webkit-scrollbar-thumb:hover { background: #9290c3; }
-
-/* ── Hero entrance animations ── */
+/* ── Hero entrance ── */
 @keyframes heroSlideUp {
-  from { opacity: 0; transform: translateY(32px); }
+  from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes heroSlideRight {
-  from { opacity: 0; transform: translateX(40px); }
-  to   { opacity: 1; transform: translateX(0); }
+@keyframes heroSlideIn {
+  from { opacity: 0; transform: translateY(28px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* ── Scroll reveal ── */
+/* ── Scroll reveal (enhances an already-visible default) ── */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(24px);
   transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1),
               transform 0.7s cubic-bezier(0.16,1,0.3,1);
+  will-change: opacity, transform;
 }
-.reveal.from-left  { transform: translateX(-28px); }
-.reveal.from-right { transform: translateX(28px); }
+.reveal.from-left  { transform: translateX(-24px); }
+.reveal.from-right { transform: translateX(24px); }
 .reveal.fade-only  { transform: none; }
 .reveal.visible {
   opacity: 1;
   transform: translate(0, 0);
 }
-.delay-100 { transition-delay: 0.1s; }
-.delay-200 { transition-delay: 0.2s; }
-.delay-300 { transition-delay: 0.3s; }
-.delay-400 { transition-delay: 0.4s; }
-.delay-500 { transition-delay: 0.5s; }
-
-/* ── Modal animation ── */
-@keyframes modalIn {
-  from { opacity: 0; transform: scale(0.95) translateY(8px); }
-  to   { opacity: 1; transform: scale(1) translateY(0); }
-}
-
-/* ── Float animations ── */
-@keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-@keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
-@keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-.float-a { animation: floatA 3.5s ease-in-out infinite; will-change: transform; }
-.float-b { animation: floatB 4.2s ease-in-out infinite 0.6s; will-change: transform; }
-.float-c { animation: floatC 3.8s ease-in-out infinite 1.2s; will-change: transform; }
-.float-d { animation: floatB 4.5s ease-in-out infinite 0.3s; will-change: transform; }
-.float-e { animation: floatA 3.2s ease-in-out infinite 0.9s; will-change: transform; }
-
-/* ── Corner accent helper ── */
-.corner-br::after {
-  content: '';
-  position: absolute;
-  bottom: 0; right: 0;
-  width: 12px; height: 12px;
-  background: #9290c3;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
-}
-.corner-tr::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 10px; height: 10px;
-  background: #535c91;
-  clip-path: polygon(100% 0, 100% 100%, 0 0);
-}
+.delay-100 { transition-delay: 0.08s; }
+.delay-200 { transition-delay: 0.16s; }
+.delay-300 { transition-delay: 0.24s; }
+.delay-400 { transition-delay: 0.32s; }
+.delay-500 { transition-delay: 0.40s; }

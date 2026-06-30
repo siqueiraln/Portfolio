@@ -21,31 +21,31 @@ export const SOLUTIONS: Solution[] = [
     id: 'web',
     title: 'Desenvolvimento Web',
     description: 'Sites, landing pages, sistemas e MVPs para sua empresa. Do projeto simples ao sistema completo — entrego com qualidade profissional e sem enrolação.',
-    icon: <Globe className="w-7 h-7 text-white" />
+    icon: <Globe className="w-7 h-7 text-on-accent" />
   },
   {
     id: 'automation',
     title: 'Automação com n8n e IA',
     description: 'Elimine tarefas repetitivas. Conecto sistemas, automatizo fluxos de WhatsApp, e-mail, CRM e muito mais — sua equipe livre para o que realmente importa.',
-    icon: <Zap className="w-7 h-7 text-white" />
+    icon: <Zap className="w-7 h-7 text-on-accent" />
   },
   {
     id: 'saas-consulting',
     title: 'Consultoria de Serviços Online',
     description: 'Não sabe quais ferramentas e assinaturas valem para sua empresa? Analiso seu negócio e indico o que realmente faz sentido — sem pagar por o que não usa.',
-    icon: <LayoutGrid className="w-7 h-7 text-white" />
+    icon: <LayoutGrid className="w-7 h-7 text-on-accent" />
   },
   {
     id: 'hardware',
     title: 'Consultoria de Hardware',
     description: 'Precisa de computador, impressora ou equipamento para a empresa? Indico o ideal para seu orçamento e busco os melhores preços nos maiores marketplaces do Brasil.',
-    icon: <Cpu className="w-7 h-7 text-white" />
+    icon: <Cpu className="w-7 h-7 text-on-accent" />
   },
   {
     id: 'maintenance',
     title: 'Manutenção de Computadores',
     description: 'Formatação, limpeza, troca de peças, aumento de memória e suporte técnico. Computador lento ou com problema? Resolvo presencialmente em Simão Dias e região.',
-    icon: <Wrench className="w-7 h-7 text-white" />
+    icon: <Wrench className="w-7 h-7 text-on-accent" />
   },
 ];
 

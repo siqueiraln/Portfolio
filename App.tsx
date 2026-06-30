@@ -11,13 +11,13 @@ const FAQ = React.lazy(() => import('./components/FAQ'));
 const Contact = React.lazy(() => import('./components/Contact'));
 const ChatWidget = React.lazy(() => import('./components/ChatWidget'));
 
-const ComponentFallback = () => <div className="h-96 bg-[#070f2b]" />;
+const ComponentFallback = () => <div className="h-96 bg-surface" />;
 
 const App: React.FC = () => {
   useScrollReveal();
 
   return (
-    <div className="min-h-screen bg-[#070f2b] text-slate-100">
+    <div className="min-h-screen bg-bg text-ink">
       <Navbar />
       <main>
         <Hero />

@@ -26,17 +26,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
       onClick={onClose}
     >
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/75 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
 
       {/* Panel */}
       <div
-        className="relative z-10 w-full max-w-xl max-h-[90vh] overflow-y-auto bg-[#070f2b] border border-purple-500/60 clip-notch animate-[modalIn_0.2s_ease-out]"
+        className="relative z-10 w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-2xl bg-card border border-line shadow-card-hover animate-modalIn"
         onClick={(e) => e.stopPropagation()}
-        style={{ animation: 'modalIn 0.2s ease-out' }}
       >
-        {/* Top accent */}
-        <div className="absolute top-0 left-0 right-0 h-0.5 bg-purple-500 z-10"></div>
-
         {/* Image */}
         <div className="relative h-48 overflow-hidden shrink-0">
           <img
@@ -44,22 +40,23 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             alt={project.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#070f2b] via-[#070f2b]/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
           {/* Close */}
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 p-1.5 bg-black/60 hover:bg-purple-900/80 border border-purple-500/40 text-white transition-colors"
+            aria-label="Fechar"
+            className="absolute top-3 right-3 p-1.5 rounded-lg bg-black/50 hover:bg-black/70 border border-white/20 text-white transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
 
           {/* Title */}
-          <div className="absolute bottom-4 left-6">
-            <span className="text-[10px] font-black uppercase tracking-widest text-purple-400 mb-1 block">
+          <div className="absolute bottom-4 left-6 right-6">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-white/80 mb-1 block">
               {project.category}
             </span>
-            <h2 className="font-display text-xl font-extrabold text-white uppercase tracking-tight">
+            <h2 className="font-display text-xl text-white uppercase tracking-tight">
               {project.title}
             </h2>
           </div>
@@ -68,18 +65,18 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         {/* Content */}
         <div className="p-6 space-y-5">
           {/* Headline */}
-          <p className="text-slate-200 text-sm leading-relaxed font-medium">
+          <p className="text-ink text-sm leading-relaxed font-medium">
             {details.headline}
           </p>
 
           {/* Sections */}
           <div className="space-y-4">
             {details.sections.map((section, i) => (
-              <div key={i} className="border-l-2 border-purple-500/40 pl-4">
-                <h4 className="text-purple-300 text-[10px] font-black uppercase tracking-widest mb-1">
+              <div key={i} className="border-l-2 border-accent/50 pl-4">
+                <h4 className="text-accent text-[10px] font-bold uppercase tracking-widest mb-1">
                   {section.icon} {section.title}
                 </h4>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-muted text-sm leading-relaxed">
                   {section.content}
                 </p>
               </div>
@@ -91,7 +88,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="clip-chamfer-sm px-2.5 py-1 bg-purple-900/30 text-purple-300 text-[10px] font-bold uppercase tracking-wider border border-purple-700/50"
+                className="rounded-md px-2.5 py-1 bg-accent-soft text-accent text-[10px] font-semibold uppercase tracking-wider"
               >
                 {tech}
               </span>
@@ -100,14 +97,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
           {/* CTA links */}
           {details.cta && details.cta.length > 0 && (
-            <div className="flex flex-wrap gap-3 pt-3 border-t border-purple-800/40">
+            <div className="flex flex-wrap gap-3 pt-3 border-t border-line">
               {details.cta.map((link, i) => (
                 <a
                   key={i}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-widest border border-purple-500/50 text-purple-300 hover:bg-purple-900/40 hover:text-white transition-all"
+                  className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-bold uppercase tracking-widest bg-accent hover:bg-accent-hover text-on-accent transition-colors"
                 >
                   {link.label} <ExternalLink className="w-3 h-3" />
                 </a>
@@ -115,12 +112,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             </div>
           )}
         </div>
-
-        {/* Corner accent */}
-        <div
-          className="absolute bottom-0 right-0 w-4 h-4"
-          style={{ background: '#a855f7', clipPath: 'polygon(100% 0, 100% 100%, 0 100%)' }}
-        ></div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./App.tsx",
@@ -9,6 +10,26 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Semantic, theme-aware tokens (mapped to CSS vars in index.css)
+        bg:        'rgb(var(--bg) / <alpha-value>)',
+        surface:   'rgb(var(--surface) / <alpha-value>)',
+        card:      'rgb(var(--card) / <alpha-value>)',
+        line:      'rgb(var(--line) / <alpha-value>)',
+        'line-strong': 'rgb(var(--line-strong) / <alpha-value>)',
+        ink:       'rgb(var(--ink) / <alpha-value>)',
+        muted:     'rgb(var(--muted) / <alpha-value>)',
+        subtle:    'rgb(var(--subtle) / <alpha-value>)',
+        accent: {
+          DEFAULT: 'rgb(var(--accent) / <alpha-value>)',
+          hover:   'rgb(var(--accent-hover) / <alpha-value>)',
+          soft:    'rgb(var(--accent-soft) / <alpha-value>)',
+        },
+        'on-accent': 'rgb(var(--on-accent) / <alpha-value>)',
+        whatsapp: {
+          DEFAULT: '#25D366',
+          hover:   '#1faa54',
+        },
+        // Legacy brand ramp kept for any stray reference; prefer semantic tokens.
         brand: {
           50:  '#f0eeff',
           100: '#e2deff',
@@ -27,16 +48,19 @@ export default {
         sans:    ['Inter', 'system-ui', 'sans-serif'],
         display: ['"Special Gothic Expanded One"', 'system-ui', 'sans-serif'],
       },
+      boxShadow: {
+        card:      '0 1px 2px rgb(var(--shadow) / 0.04), 0 8px 24px rgb(var(--shadow) / 0.06)',
+        'card-hover': '0 2px 4px rgb(var(--shadow) / 0.06), 0 16px 40px rgb(var(--shadow) / 0.10)',
+      },
       keyframes: {
-        wiggle: {
-          '0%, 100%': { transform: 'rotate(-15deg)' },
-          '50%':       { transform: 'rotate(15deg)' },
-        }
+        modalIn: {
+          from: { opacity: '0', transform: 'scale(0.97) translateY(8px)' },
+          to:   { opacity: '1', transform: 'scale(1) translateY(0)' },
+        },
       },
       animation: {
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        wiggle:       'wiggle 2.5s ease-in-out infinite',
-      }
+        modalIn: 'modalIn 0.22s cubic-bezier(0.16,1,0.3,1)',
+      },
     },
   },
   plugins: [],
