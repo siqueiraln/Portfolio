@@ -6,9 +6,16 @@ const useScrollReveal = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            const el = entry.target as HTMLElement;
+            el.classList.add('visible');
             // Não desanima ao sair da viewport — efeito one-shot
-            observer.unobserve(entry.target);
+            observer.unobserve(el);
+            // Libera a camada de composição (will-change) quando a transição termina,
+            // evitando segurar memória de GPU em dezenas de elementos pela sessão toda.
+            const release = () => { el.style.willChange = 'auto'; };
+            el.addEventListener('transitionend', release, { once: true });
+            // Fallback caso transitionend não dispare (ex.: prefers-reduced-motion)
+            window.setTimeout(release, 1200);
           }
         });
       },

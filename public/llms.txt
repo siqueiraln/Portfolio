@@ -1,0 +1,26 @@
+# Lucas Siqueira — Parceiro de Tecnologia
+
+> Parceiro de tecnologia para pequenas e médias empresas em Simão Dias, Sergipe (SE), Brasil. Resolve tudo que envolve tecnologia no negócio — desenvolvimento web, automação de processos com n8n e IA, manutenção de computadores, consultoria de hardware e consultoria de serviços online (SaaS) — com atendimento presencial em Simão Dias e região e remoto em todo o Brasil.
+
+## Quem é
+
+Lucas Siqueira é um parceiro de tecnologia para empresas baseado em Simão Dias, SE. O objetivo é substituir a necessidade de um setor de TI interno: um único profissional que cria sites e sistemas, automatiza tarefas repetitivas, dá suporte técnico, orienta na compra de equipamentos e indica quais ferramentas e assinaturas realmente valem a pena. Contato: WhatsApp +55 79 99897-4970 · e-mail lucas.sikeira78@gmail.com.
+
+## Serviços
+
+- **Desenvolvimento web**: criação de sites, landing pages, sistemas web e MVPs. Landing page simples em 3–5 dias úteis; site institucional completo em 1–2 semanas; sistemas mais complexos (agendamento, área de membros, integrações) entre 2 e 6 semanas.
+- **Automação de processos com n8n e IA**: elimina tarefas manuais e integra sistemas. Exemplos: confirmações e cobranças automáticas por WhatsApp, sincronização de pedidos entre sistemas, relatórios automáticos, respostas fora do horário e publicação de conteúdo.
+- **Manutenção de computadores**: formatação, limpeza de vírus, troca de pasta térmica, upgrade de RAM e SSD, recuperação de dados e diagnóstico. Atendimento presencial em Simão Dias e região, com suporte recorrente para empresas.
+- **Consultoria de hardware**: indicação do equipamento com melhor custo-benefício para o uso e o orçamento do cliente, com busca de preço nos maiores marketplaces do Brasil (Mercado Livre, Amazon, Magalu).
+- **Consultoria de serviços online (SaaS)**: análise das ferramentas que a empresa usa e recomendação das melhores opções para reduzir custos com assinaturas desnecessárias.
+
+## Cobertura
+
+- Atendimento presencial: Simão Dias, Sergipe, e municípios da região.
+- Atendimento remoto: todo o Brasil.
+
+## Links
+
+- Site: https://lucassiqueira.vercel.app/
+- LinkedIn: https://www.linkedin.com/in/lucas-siqueira-1a5bb51b2/
+- GitHub: https://github.com/siqueiraln

@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
                 <div className="relative h-48 overflow-hidden shrink-0">
                   <img
                     src={project.imageUrl}
-                    alt={project.title}
+                    alt={`Projeto ${project.title} — ${project.category}`}
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

@@ -45,18 +45,9 @@ const faqs = [
   },
 ];
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map(f => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: f.a,
-    },
-  })),
-};
+// Nota: o JSON-LD do FAQPage agora vive estaticamente no <head> de index.html,
+// garantindo que crawlers e motores de IA sem execução de JS o enxerguem.
+// Ao editar as perguntas/respostas acima, atualize também o bloco em index.html.
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -65,12 +56,6 @@ const FAQ: React.FC = () => {
 
   return (
     <section id={SectionId.FAQ} className="py-24 bg-bg relative overflow-hidden">
-      {/* Schema injection */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
       {/* Ambient glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/[0.06] rounded-full blur-[80px] -z-10" />
 

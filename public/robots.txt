@@ -1,14 +1,20 @@
 User-agent: *
 Allow: /
 
-# AI crawlers
+# AI crawlers (treinamento e busca em tempo real)
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: ClaudeBot
+Allow: /
+
+User-agent: Amazonbot
 Allow: /
 
 User-agent: Googlebot
