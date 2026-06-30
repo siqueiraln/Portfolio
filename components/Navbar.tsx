@@ -9,6 +9,10 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, toggle } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+  // Antes de montar, espelha o tema do servidor ('light') para evitar mismatch de hidratação.
+  const displayTheme = mounted ? theme : 'light';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +66,7 @@ const Navbar: React.FC = () => {
                   {link.name}
                 </button>
               ))}
-              <ThemeToggle theme={theme} onToggle={toggle} />
+              <ThemeToggle theme={displayTheme} onToggle={toggle} />
               <a
                 href={PERSONAL_INFO.socials.whatsapp}
                 target="_blank"
@@ -75,7 +79,7 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="-mr-2 flex items-center gap-2 md:hidden">
-            <ThemeToggle theme={theme} onToggle={toggle} />
+            <ThemeToggle theme={displayTheme} onToggle={toggle} />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-lg text-muted hover:text-ink hover:bg-surface focus:outline-none"
