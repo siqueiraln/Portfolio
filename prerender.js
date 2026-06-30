@@ -17,10 +17,12 @@ const { render } = await import(pathToFileURL(serverEntry).href);
 const appHtml = render();
 
 if (!appHtml || appHtml.length < 100) {
-  throw new Error('prerender: render() retornou HTML vazio/curto (' + appHtml.length + ' chars)');
+  throw new Error('prerender: render() retornou HTML vazio/curto (' + (appHtml?.length ?? 0) + ' chars)');
 }
 
-const html = template.replace(PLACEHOLDER, `<div id="root">${appHtml}</div>`);
+// Replacer como função: evita que sequências especiais ($&, $`, $$ etc.) no
+// HTML renderizado sejam interpretadas como padrões de substituição.
+const html = template.replace(PLACEHOLDER, () => `<div id="root">${appHtml}</div>`);
 fs.writeFileSync(distIndex, html);
 
 // Remove o bundle de servidor — não deve ir para produção.
